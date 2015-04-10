@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>742</width>
+    <height>582</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Operador Imágenes</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Imagen A</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGraphicsView" name="imgA"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="loadImgA">
+          <property name="text">
+           <string>Cargar A</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Imagen B</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGraphicsView" name="imgB"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="loadImgB">
+          <property name="text">
+           <string>Cargar B</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Imagen C</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGraphicsView" name="imgC"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="calcular">
+          <property name="text">
+           <string>Calcular</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QComboBox" name="operacion"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>742</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpenImgA">
+   <property name="text">
+    <string>openImgA</string>
+   </property>
+  </action>
+  <action name="actionOpenImgB">
+   <property name="text">
+    <string>openImgB</string>
+   </property>
+  </action>
+  <action name="actionOperate">
+   <property name="text">
+    <string>operate</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>loadImgA</sender>
+   <signal>clicked()</signal>
+   <receiver>actionOpenImgA</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>128</x>
+     <y>502</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>loadImgB</sender>
+   <signal>clicked()</signal>
+   <receiver>actionOpenImgB</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>370</x>
+     <y>502</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>calcular</sender>
+   <signal>clicked()</signal>
+   <receiver>actionOperate</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>613</x>
+     <y>502</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
